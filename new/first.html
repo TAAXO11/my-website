@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdifatah | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <script>
+    $(document).ready(function(){
+    // Sticky navbar on scroll
+    $(window).scroll(function(){
+        if(this.scrollY > 20){
+            $('.navbar').addClass("sticky");
+        } else {
+            $('.navbar').removeClass("sticky");
+        }
+    });
+
+    // Typing animation
+    var typed = new Typed(".typing", {
+        strings: ["Web Developer", "Designer", "Freelancer", "Software Engineer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+
+    // Toggle menu/navbar for mobile
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+});
+</script>
+    <nav id="navbar">
+        <img src="images-removebg-preview.png" class="logo" alt="Logo">
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact" class="hire-btn">HIRE ME</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="detail">
+            <h1>I'm <span>Abdifatah</span> <br> Muhumed</h1>
+            <p>This is my official portfolio website to show all <br> 
+               Details and work experience in web development.</p>
+            <a href="my-cv.pdf" download="Abdifatah_CV" class="btn">DOWNLOAD CV</a>
+        </div>
+        <div class="images">
+            <img src="shape.png" class="shape">
+            <img src="girl.png" class="girl">
+        </div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/TAAXO11" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://instagram.com/yourprofile" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <section class="content-section" id="about">
+        <div class="container">
+            <h1><span>About</span> Me</h1>
+            <p>Passionate web developer focused on creating clean and functional user experiences.</p>
+        </div>
+    </section>
+
+    <section class="content-section" id="portfolio">
+        <div class="container">
+            <h1>My <span>Portfolio</span></h1>
+            <p>Check out my latest projects and web builds.</p>
+        </div>
+    </section>
+
+    <section class="content-section" id="services">
+        <div class="container">
+            <h1>Our <span>Services</span></h1>
+            <p>From UI/UX Design to Full-Stack Development.</p>
+        </div>
+    </section>
+
+    <section class="content-section" id="contact">
+        <div class="container">
+            <h1><span>Hire</span> Me</h1>
+            <p>Have a project in mind? Let's connect!</p>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
